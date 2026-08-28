@@ -4,8 +4,16 @@ import { useEffect, useRef, useState } from 'react';
 import { Particles } from './Particles';
 import { Fog } from './Fog';
 
+const getAssetUrl = (path: string) => {
+  if (!path) return '';
+  const base = import.meta.env.BASE_URL || '/';
+  const cleanBase = base.endsWith('/') ? base : `${base}/`;
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${cleanBase}${cleanPath}`;
+};
+
 // A placeholder for the background audio. 
-const AUDIO_SRC = "/aria-of-the-soul.mp3";
+const AUDIO_SRC = getAssetUrl("/aria-of-the-soul.mp3");
 
 // A placeholder for the default background image. 
 const DEFAULT_BG_IMAGE = "";
@@ -96,7 +104,7 @@ export function VelvetRoom() {
               transition={{ duration: 3, delay: 0.5 }}
             >
               <motion.img
-                src="/velvet_logo.png"
+                src={getAssetUrl("/velvet_logo.png")}
                 alt=""
                 className="w-[88vw] md:w-[44vw] max-w-[560px] select-none"
                 animate={{
@@ -151,7 +159,7 @@ export function VelvetRoom() {
               transition={{ duration: 3, delay: 1 }}
             >
               <motion.img
-                src="/velvet_logo.png"
+                src={getAssetUrl("/velvet_logo.png")}
                 alt=""
                 className="w-[82vw] md:w-[42vw] max-w-[540px] select-none"
                 style={{ filter: "drop-shadow(0 0 18px rgba(212,175,55,0.55)) drop-shadow(0 0 50px rgba(212,175,55,0.25))" }}
@@ -180,7 +188,7 @@ export function VelvetRoom() {
                 >
                   {/* Top protagonist — dynamic top-left / top-right on mobile, bottom-left on desktop */}
                   <motion.img
-                    src={(currentBgImage as string[])[0]}
+                    src={getAssetUrl((currentBgImage as string[])[0])}
                     alt=""
                     className={`absolute -top-16 ${mobileTopPos === 'left' ? 'left-0' : 'right-0'} md:top-auto md:bottom-0 md:left-0 md:right-auto h-[55vh] max-h-[58vh] md:h-[88vh] md:max-h-[88vh] w-auto object-contain ${mobileTopPos === 'left' ? 'object-left-top' : 'object-right-top'} md:object-bottom select-none`}
                     style={{
@@ -201,7 +209,7 @@ export function VelvetRoom() {
                   />
                   {/* Bottom protagonist — dynamic bottom-right / bottom-left on mobile, bottom-right on desktop */}
                   <motion.img
-                    src={(currentBgImage as string[])[1]}
+                    src={getAssetUrl((currentBgImage as string[])[1])}
                     alt=""
                     className={`absolute bottom-0 ${mobileBottomPos === 'left' ? 'left-0' : 'right-0'} md:right-0 md:left-auto h-[55vh] max-h-[58vh] md:h-[88vh] md:max-h-[88vh] w-auto object-contain ${mobileBottomPos === 'left' ? 'object-left-bottom' : 'object-right-bottom'} md:object-bottom select-none`}
                     style={{
@@ -236,7 +244,7 @@ export function VelvetRoom() {
                   transition={{ duration: 1.2, ease: "easeOut" }}
                 >
                   <motion.img
-                    src={currentBgImage as string}
+                    src={getAssetUrl(currentBgImage as string)}
                     alt=""
                     className={`absolute ${mobileTopOffset} ${mobilePortraitPos === 'left' ? 'left-0' : 'right-0'} ${currentPortraitPos === 'left' ? 'md:left-0 md:right-auto' : 'md:right-0 md:left-auto'} md:top-auto md:bottom-0 h-[55vh] max-h-[58vh] md:h-[88vh] md:max-h-[88vh] w-auto object-contain ${mobilePortraitPos === 'left' ? 'object-left-top' : 'object-right-top'} md:object-bottom select-none`}
                     style={{
