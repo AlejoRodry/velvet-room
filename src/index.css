@@ -31,13 +31,48 @@
     box-shadow: 0 0 40px rgba(5, 11, 20, 0.9), inset 0 0 20px rgba(18, 40, 94, 0.5);
   }
 
-  /* 360-Degree & Dual-Edge Feathered Masks for Character Portraits (Blurs Left, Right & Bottom edges) */
-  .mask-portrait-left-left,
-  .mask-portrait-right-left,
-  .mask-portrait-right-right,
+  /* Portrait edge feathering — fades the INNER edge of each character portrait */
+
+  /* LEFT on screen (desktop) → inner edge is on the RIGHT → fade right side */
+  .mask-portrait-left-left {
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 1) 45%);
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 1) 45%);
+  }
+
+  /* LEFT on desktop, RIGHT on mobile → on mobile fade left corner; on desktop fade right inner edge */
+  .mask-portrait-right-left {
+    /* mobile: anchored right → inner edge is left side */
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 1) 45%);
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 1) 45%);
+  }
+
+  @media (min-width: 768px) {
+    .mask-portrait-right-left {
+      /* desktop: anchored left → inner edge is right side */
+      -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 1) 45%);
+      mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 1) 45%);
+    }
+  }
+
+  /* RIGHT on screen (desktop) → inner edge is on the LEFT → fade left side */
+  .mask-portrait-right-right {
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 1) 45%);
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 1) 45%);
+  }
+
+  /* RIGHT on desktop, LEFT on mobile */
   .mask-portrait-left-right {
-    -webkit-mask-image: radial-gradient(ellipse 75% 85% at 48% 45%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0.85) 60%, rgba(0, 0, 0, 0.2) 82%, rgba(0, 0, 0, 0) 98%);
-    mask-image: radial-gradient(ellipse 75% 85% at 48% 45%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0.85) 60%, rgba(0, 0, 0, 0.2) 82%, rgba(0, 0, 0, 0) 98%);
+    /* mobile: anchored left → inner edge is right */
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 1) 45%);
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 1) 45%);
+  }
+
+  @media (min-width: 768px) {
+    .mask-portrait-left-right {
+      /* desktop: anchored right → inner edge is left */
+      -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 1) 45%);
+      mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 1) 45%);
+    }
   }
 }
 
