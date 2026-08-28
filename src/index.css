@@ -3,7 +3,7 @@
 @theme {
   --font-serif: "Cormorant Garamond", serif;
   --font-sans: "Montserrat", sans-serif;
-  
+
   --color-velvet-dark: #050b14;
   --color-velvet-mid: #0a1836;
   --color-velvet-light: #12285e;
@@ -31,45 +31,20 @@
     box-shadow: 0 0 40px rgba(5, 11, 20, 0.9), inset 0 0 20px rgba(18, 40, 94, 0.5);
   }
 
-  /* Responsive Feathered Edge Masks for Character Portraits */
-  .mask-portrait-left-left {
-    -webkit-mask-image: linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 2.5%, rgba(0,0,0,0.85) 6%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 98%);
-    mask-image: linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 2.5%, rgba(0,0,0,0.85) 6%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 98%);
-  }
-
-  .mask-portrait-right-left {
-    -webkit-mask-image: linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 2.5%, rgba(0,0,0,0.85) 6%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 98%);
-    mask-image: linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 2.5%, rgba(0,0,0,0.85) 6%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 98%);
-  }
-
-  @media (min-width: 768px) {
-    .mask-portrait-right-left {
-      -webkit-mask-image: linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 2.5%, rgba(0,0,0,0.85) 6%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 98%);
-      mask-image: linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 2.5%, rgba(0,0,0,0.85) 6%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 98%);
-    }
-  }
-
-  .mask-portrait-right-right {
-    -webkit-mask-image: linear-gradient(315deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 2.5%, rgba(0,0,0,0.85) 6%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 98%);
-    mask-image: linear-gradient(315deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 2.5%, rgba(0,0,0,0.85) 6%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 98%);
-  }
-
+  /* 360-Degree & Dual-Edge Feathered Masks for Character Portraits (Blurs Left, Right & Bottom edges) */
+  .mask-portrait-left-left,
+  .mask-portrait-right-left,
+  .mask-portrait-right-right,
   .mask-portrait-left-right {
-    -webkit-mask-image: linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 2.5%, rgba(0,0,0,0.85) 6%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 98%);
-    mask-image: linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 2.5%, rgba(0,0,0,0.85) 6%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 98%);
-  }
-
-  @media (min-width: 768px) {
-    .mask-portrait-left-right {
-      -webkit-mask-image: linear-gradient(315deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 2.5%, rgba(0,0,0,0.85) 6%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 98%);
-      mask-image: linear-gradient(315deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 2.5%, rgba(0,0,0,0.85) 6%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 98%);
-    }
+    -webkit-mask-image: radial-gradient(ellipse 75% 85% at 48% 45%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0.85) 60%, rgba(0, 0, 0, 0.2) 82%, rgba(0, 0, 0, 0) 98%);
+    mask-image: radial-gradient(ellipse 75% 85% at 48% 45%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0.85) 60%, rgba(0, 0, 0, 0.2) 82%, rgba(0, 0, 0, 0) 98%);
   }
 }
 
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Prevent scrolling in the single page experience */
+  overflow: hidden;
+  /* Prevent scrolling in the single page experience */
   background-color: var(--color-velvet-dark);
 }
