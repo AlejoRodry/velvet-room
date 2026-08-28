@@ -1,0 +1,6 @@
+{
+  "name": "Velvet Room Birthday",
+  "description": "Una tarjeta interactiva de cumpleaños inspirada en la Velvet Room de Persona.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

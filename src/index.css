@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Montserrat", sans-serif;
+  
+  --color-velvet-dark: #050b14;
+  --color-velvet-mid: #0a1836;
+  --color-velvet-light: #12285e;
+  --color-velvet-gold: #d4af37;
+  --color-velvet-gold-light: #f3e5ab;
+}
+
+@layer utilities {
+  .bg-velvet-gradient {
+    background: radial-gradient(circle at center, var(--color-velvet-light) 0%, var(--color-velvet-mid) 40%, var(--color-velvet-dark) 100%);
+  }
+
+  .text-glow-gold {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.7), 0 0 20px rgba(212, 175, 55, 0.4);
+  }
+
+  .text-glow-blue {
+    text-shadow: 0 0 10px rgba(173, 216, 230, 0.6), 0 0 20px rgba(173, 216, 230, 0.3);
+  }
+
+  .glass-panel {
+    background: rgba(10, 24, 54, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 0 40px rgba(5, 11, 20, 0.9), inset 0 0 20px rgba(18, 40, 94, 0.5);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling in the single page experience */
+  background-color: var(--color-velvet-dark);
+}
