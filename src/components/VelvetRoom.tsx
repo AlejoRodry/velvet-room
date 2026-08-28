@@ -196,11 +196,11 @@ export function VelvetRoom() {
                         ? "drop-shadow(0 0 25px rgba(212,175,55,0.25)) drop-shadow(4px 0 20px rgba(10,10,40,0.6))"
                         : "drop-shadow(0 0 25px rgba(212,175,55,0.25)) drop-shadow(-4px 0 20px rgba(10,10,40,0.6))",
                       maskImage: mobileTopPos === 'left'
-                        ? "linear-gradient(135deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0.75) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)"
-                        : "linear-gradient(225deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0.75) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)",
+                        ? "linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 7%, rgba(0,0,0,1) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)"
+                        : "linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 7%, rgba(0,0,0,1) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)",
                       WebkitMaskImage: mobileTopPos === 'left'
-                        ? "linear-gradient(135deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0.75) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)"
-                        : "linear-gradient(225deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0.75) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)"
+                        ? "linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 7%, rgba(0,0,0,1) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)"
+                        : "linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 7%, rgba(0,0,0,1) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)"
                     }}
                     initial={{ x: mobileTopPos === 'left' ? -60 : 60, opacity: 0 }}
                     animate={{ x: 0, opacity: 0.55 }}
@@ -217,11 +217,11 @@ export function VelvetRoom() {
                         ? "drop-shadow(0 0 25px rgba(212,175,55,0.25)) drop-shadow(4px 0 20px rgba(10,10,40,0.6))"
                         : "drop-shadow(0 0 25px rgba(212,175,55,0.25)) drop-shadow(-4px 0 20px rgba(10,10,40,0.6))",
                       maskImage: mobileBottomPos === 'left'
-                        ? "linear-gradient(135deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0.75) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)"
-                        : "linear-gradient(315deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0.75) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)",
+                        ? "linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 7%, rgba(0,0,0,1) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)"
+                        : "linear-gradient(315deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 7%, rgba(0,0,0,1) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)",
                       WebkitMaskImage: mobileBottomPos === 'left'
-                        ? "linear-gradient(135deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0.75) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)"
-                        : "linear-gradient(315deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0.75) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)"
+                        ? "linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 7%, rgba(0,0,0,1) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)"
+                        : "linear-gradient(315deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 7%, rgba(0,0,0,1) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)"
                     }}
                     initial={{ x: mobileBottomPos === 'left' ? -60 : 60, opacity: 0, scaleX: shouldMirrorRight ? -1 : 1 }}
                     animate={{ x: 0, opacity: 0.55, scaleX: shouldMirrorRight ? -1 : 1 }}
@@ -252,11 +252,11 @@ export function VelvetRoom() {
                         ? "drop-shadow(0 0 30px rgba(212,175,55,0.2)) drop-shadow(4px 0 20px rgba(10,10,40,0.5))"
                         : "drop-shadow(0 0 30px rgba(212,175,55,0.2)) drop-shadow(-4px 0 20px rgba(10,10,40,0.5))",
                       maskImage: mobilePortraitPos === 'left'
-                        ? "linear-gradient(135deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0.75) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)"
-                        : "linear-gradient(225deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0.75) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)",
+                        ? "linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 7%, rgba(0,0,0,1) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)"
+                        : "linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 7%, rgba(0,0,0,1) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)",
                       WebkitMaskImage: mobilePortraitPos === 'left'
-                        ? "linear-gradient(135deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0.75) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)"
-                        : "linear-gradient(225deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0.75) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)"
+                        ? "linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 7%, rgba(0,0,0,1) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)"
+                        : "linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 7%, rgba(0,0,0,1) 58%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 98%)"
                     }}
                     initial={{ x: mobilePortraitPos === 'left' ? -60 : 60, opacity: 0 }}
                     animate={{ x: 0, opacity: 0.55 }}
